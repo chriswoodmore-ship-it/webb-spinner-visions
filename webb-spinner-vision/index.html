@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webb Spinner Visions • Nashville Video Production &amp; AI Storytelling</title>
+  <meta name="description" content="Webb Spinner Visions — 30+ years of sales-driven video production, cinematic logo animations, and AI-powered storytelling. Based in Nashville, Tennessee.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Tailwind config + extra polish */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+    
+    :root {
+      --accent: #f59e0b;
+    }
+    
+    body {
+      font-family: 'Inter', system_ui, sans-serif;
+    }
+    
+    .heading-font {
+      font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+    }
+
+    .section-header {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-header:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #f59e0b, transparent);
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #f59e0b;
+      transition: width 0.2s ease;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    .portfolio-item {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                  box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    
+    .portfolio-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .play-overlay {
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(12,12,14,0.65) 100%);
+      transition: all 0.2s ease;
+    }
+
+    .portfolio-item:hover .play-overlay {
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(12,12,14,0.85) 100%);
+    }
+
+    .stat-number {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .filter-btn {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid #2a2a32;
+      color: #94a3b8;
+      background: #141418;
+    }
+    
+    .filter-btn:hover:not(.active) {
+      border-color: #f59e0b;
+      color: #f59e0b;
+    }
+
+    .filter-btn.active {
+      background-color: #f59e0b;
+      color: #0c0c0e;
+      border-color: #f59e0b;
+    }
+
+    .service-card {
+      transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+
+    video {
+      background: #0c0c0e;
+    }
+
+    .hero-grid {
+      background-image: 
+        linear-gradient(rgba(42, 42, 50, 0.35) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(42, 42, 50, 0.35) 1px, transparent 1px);
+      background-size: 52px 52px;
+    }
+
+    .logo-glow {
+      filter: drop-shadow(0 0 25px rgba(245, 158, 11, 0.3));
+    }
+
+    .marquee {
+      animation: marquee 25s linear infinite;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .video-container {
+      position: relative;
+    }
+
+    .video-container::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      box-shadow: inset 0 0 0 1px rgba(42,42,50,0.6);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-[#0c0c0e] text-[#e2e8f0] overflow-x-hidden">
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#0c0c0e]/95 backdrop-blur-lg border-b border-[#2a2a32]">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-x-3">
+        <div class="relative">
+          <img src="WSV LOGO.jpg" alt="Webb Spinner Visions" class="h-11 w-11 object-contain rounded-lg ring-1 ring-[#2a2a32]">
+          <div class="absolute -inset-1 bg-gradient-to-br from-amber-500/20 to-transparent rounded-xl -z-10"></div>
+        </div>
+        <div>
+          <div class="font-semibold tracking-[3px] text-xl leading-none">WEBB SPINNER</div>
+          <div class="text-[10px] text-amber-500 tracking-[2px] font-medium -mt-0.5">VISIONS</div>
+        </div>
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+        <a href="#services" class="nav-link text-[#e2e8f0] hover:text-white">Services</a>
+        <a href="#work" class="nav-link text-[#e2e8f0] hover:text-white">Work</a>
+        <a href="#process" class="nav-link text-[#e2e8f0] hover:text-white">Process</a>
+        <a href="#contact" class="nav-link text-[#e2e8f0] hover:text-white">Contact</a>
+      </div>
+
+      <div class="hidden md:block">
+        <a href="#contact" 
+           class="inline-flex items-center gap-x-2 px-6 py-2.5 text-sm font-semibold rounded-2xl bg-white text-[#0c0c0e] hover:bg-amber-500 hover:text-white active:scale-[0.985] transition-all">
+          <span>Start a project</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" 
+              class="md:hidden w-11 h-11 flex items-center justify-center text-xl text-[#94a3b8] hover:text-white transition-colors"
+              aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu-backdrop" 
+       class="fixed inset-0 bg-black/70 z-[60] opacity-0 pointer-events-none transition-opacity duration-200 md:hidden"></div>
+  
+  <div id="mobile-menu" 
+       class="mobile-menu fixed top-0 right-0 bottom-0 w-72 bg-[#141418] z-[70] p-8 flex flex-col md:hidden border-l border-[#2a2a32]">
+    <div class="flex justify-between items-center mb-10">
+      <div class="flex items-center gap-x-3">
+        <img src="WSV LOGO.jpg" alt="" class="h-8 w-8 object-contain">
+        <span class="font-semibold tracking-widest text-lg">WSV</span>
+      </div>
+      <button id="mobile-menu-close" class="text-2xl text-[#94a3b8] hover:text-white">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="flex flex-col gap-y-1 text-lg font-medium">
+      <a href="#services" class="mobile-nav-link py-4 px-1 border-b border-[#2a2a32] hover:text-amber-500">Services</a>
+      <a href="#work" class="mobile-nav-link py-4 px-1 border-b border-[#2a2a32] hover:text-amber-500">Work</a>
+      <a href="#process" class="mobile-nav-link py-4 px-1 border-b border-[#2a2a32] hover:text-amber-500">Process</a>
+      <a href="#contact" class="mobile-nav-link py-4 px-1 hover:text-amber-500">Contact</a>
+    </div>
+
+    <div class="mt-auto pt-8">
+      <a href="#contact" 
+         class="mobile-nav-link block w-full text-center py-3.5 rounded-2xl bg-amber-500 text-[#0c0c0e] font-semibold text-sm tracking-wider">
+        START YOUR PROJECT
+      </a>
+      <p class="text-center text-[10px] text-[#64748b] mt-6">Nashville, Tennessee</p>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="relative min-h-[100dvh] pt-20 flex items-center justify-center bg-[#0c0c0e] overflow-hidden">
+    <!-- Background grid + subtle gradient -->
+    <div class="absolute inset-0 hero-grid opacity-60"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(#1f2027_0.8px,transparent_1px)] bg-[length:4px_4px] opacity-30"></div>
+    
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-8 pb-16">
+      <!-- Animated Logo -->
+      <div class="flex justify-center mb-8">
+        <div class="relative">
+          <img src="WSV LOGO.jpg" 
+               alt="Webb Spinner Visions Logo" 
+               class="w-36 h-36 md:w-44 md:h-44 object-contain logo-spinner rounded-2xl ring-1 ring-white/10">
+          <div class="absolute -inset-[18px] rounded-[3rem] border border-amber-500/20 logo-ring-reverse"></div>
+          <div class="absolute -inset-[34px] rounded-[4rem] border border-amber-500/10 logo-ring"></div>
+        </div>
+      </div>
+
+      <h1 class="heading-font text-[56px] md:text-[78px] leading-[0.92] tracking-[-4.4px] font-semibold mb-4">
+        CRAFTING VISIONS.<br>
+        <span class="text-white/90">DRIVING RESULTS.</span>
+      </h1>
+      
+      <p class="max-w-xl mx-auto text-xl md:text-2xl text-[#94a3b8] mb-9">
+        30 years of sales experience. Cinematic video production.<br class="hidden md:block">
+        Precision AI tools. Stories that sell.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#work" 
+           class="group inline-flex items-center justify-center gap-x-3 px-9 py-4 rounded-3xl bg-white text-[#0c0c0e] font-semibold text-base hover:bg-amber-500 hover:text-white active:scale-[0.985] transition-all shadow-xl shadow-black/30 w-full sm:w-auto">
+          <span>Watch the work</span>
+          <i class="fa-solid fa-play group-hover:translate-x-0.5 transition"></i>
+        </a>
+        <a href="#contact" 
+           class="inline-flex items-center justify-center gap-x-3 px-9 py-4 rounded-3xl border border-white/20 hover:bg-white/5 font-semibold text-base active:scale-[0.985] transition-all w-full sm:w-auto">
+          Start a project
+        </a>
+      </div>
+
+      <div class="flex justify-center gap-x-8 mt-12 text-xs uppercase tracking-[2px] text-[#64748b]">
+        <div>Nashville, TN</div>
+        <div class="hidden sm:block">•</div>
+        <div>30+ Years Experience</div>
+        <div class="hidden sm:block">•</div>
+        <div>Sales-First Approach</div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-9 left-1/2 -translate-x-1/2 flex flex-col items-center text-[10px] tracking-[2px] text-[#64748b]">
+      <div>SCROLL TO EXPLORE</div>
+      <i class="fa-solid fa-chevron-down mt-1.5 animate-bounce"></i>
+    </div>
+  </section>
+
+  <!-- MARQUEE / PROMO -->
+  <div class="bg-[#111113] border-y border-[#2a2a32] py-3 overflow-hidden">
+    <div class="flex whitespace-nowrap text-sm font-medium text-[#94a3b8]">
+      <div class="inline-flex animate-[marquee_18s_linear_infinite] items-center gap-x-3 px-4">
+        <span class="text-amber-500">★</span> 
+        LIMITED TIME: 3× 60-second commercials for $1,500 
+        <span class="mx-3 text-[#3a3a42]">•</span> 
+        Logo animations from $275 
+        <span class="mx-3 text-[#3a3a42]">•</span> 
+        AI-enhanced video packages available now
+        <span class="text-amber-500 ml-3">★</span>
+      </div>
+      <div class="inline-flex animate-[marquee_18s_linear_infinite] items-center gap-x-3 px-4" aria-hidden="true">
+        <span class="text-amber-500">★</span> 
+        LIMITED TIME: 3× 60-second commercials for $1,500 
+        <span class="mx-3 text-[#3a3a42]">•</span> 
+        Logo animations from $275 
+        <span class="mx-3 text-[#3a3a42]">•</span> 
+        AI-enhanced video packages available now
+        <span class="text-amber-500 ml-3">★</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
+    <div class="text-center mb-12">
+      <div class="uppercase text-amber-500 text-xs tracking-[3px] font-semibold mb-2">What We Deliver</div>
+      <h2 class="heading-font text-5xl tracking-[-1.5px]">Services built for impact</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Service 1 -->
+      <div class="service-card reveal bg-[#1a1a1f] border border-[#2a2a32] rounded-3xl p-9 group">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-7">
+          <i class="fa-solid fa-video text-3xl"></i>
+        </div>
+        <h3 class="text-2xl font-semibold tracking-tight mb-3">Cinematic Video Production</h3>
+        <p class="text-[#94a3b8] leading-relaxed">
+          Commercials, brand films, music videos, and corporate storytelling with 30 years of real sales experience behind every frame.
+        </p>
+        <ul class="mt-6 space-y-2 text-sm text-[#64748b]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500/70 w-3"></i> 4K &amp; 6K production</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500/70 w-3"></i> On-location + studio</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500/70 w-3"></i> Sales-focused scripting</li>
+        </ul>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card reveal bg-[#1a1a1f] border border-[#2a2a32] rounded-3xl p-9 group delay-100">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-7">
+          <i class="fa-solid fa-magic text-3xl"></i>
+        </div>
+        <h3 class="text-2xl font-semibold tracking-tight mb-3">Animation &amp; Motion Design</h3>
+        <p class="text-[#94a3b8] leading-relaxed">
+          Bold logo animations, explainer videos, and high-end motion graphics that command attention and strengthen brand identity.
+        </p>
+        <ul class="mt-6 space-y-2 text-sm text-[#64748b]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500/70 w-3"></i> Cinematic logo reveals</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500/70 w-3"></i> 2D &amp; 3D motion</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500/70 w-3"></i> Lower thirds &amp; titles</li>
+        </ul>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card reveal bg-[#1a1a1f] border border-[#2a2a32] rounded-3xl p-9 group delay-200">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-7">
+          <i class="fa-solid fa-robot text-3xl"></i>
+        </div>
+        <h3 class="text-2xl font-semibold tracking-tight mb-3">AI Solutions &amp; Post</h3>
+        <p class="text-[#94a3b8] leading-relaxed">
+          AI-accelerated editing, synthetic voice, generative visuals, custom tools, and intelligent workflows that deliver more in less time.
+        </p>
+        <ul class="mt-6 space-y-2 text-sm text-[#64748b]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500/70 w-3"></i> AI editing &amp; cleanup</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500/70 w-3"></i> Custom Grok tools</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500/70 w-3"></i> Rapid iteration</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST / STATS -->
+  <div class="border-y border-[#2a2a32] bg-[#111113]">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-y-8 py-8 text-center">
+      <div>
+        <div class="text-4xl font-semibold tracking-tighter stat-number">500+</div>
+        <div class="text-xs uppercase tracking-[1.5px] text-[#64748b] mt-1">Videos Delivered</div>
+      </div>
+      <div>
+        <div class="text-4xl font-semibold tracking-tighter stat-number">30</div>
+        <div class="text-xs uppercase tracking-[1.5px] text-[#64748b] mt-1">Years in Sales &amp; Media</div>
+      </div>
+      <div>
+        <div class="text-4xl font-semibold tracking-tighter stat-number">94%</div>
+        <div class="text-xs uppercase tracking-[1.5px] text-[#64748b] mt-1">Client Repeat Rate</div>
+      </div>
+      <div>
+        <div class="text-4xl font-semibold tracking-tighter stat-number">12</div>
+        <div class="text-xs uppercase tracking-[1.5px] text-[#64748b] mt-1">Industries Served</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO / WORK -->
+  <section id="work" class="max-w-7xl mx-auto px-6 pt-20 pb-20">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-y-4">
+      <div>
+        <div class="uppercase text-amber-500 text-xs tracking-[3px] font-semibold mb-1.5">Featured Projects</div>
+        <h2 class="heading-font text-5xl tracking-[-1.5px]">Recent Work</h2>
+      </div>
+      <p class="text-[#94a3b8] max-w-xs">Real results for real companies. Every project designed to convert attention into action.</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="flex flex-wrap gap-2 mb-8" id="portfolio-filters">
+      <button class="filter-btn active px-5 py-2 rounded-2xl text-sm font-medium" data-filter="all">All Projects</button>
+      <button class="filter-btn px-5 py-2 rounded-2xl text-sm font-medium" data-filter="commercial">Commercial</button>
+      <button class="filter-btn px-5 py-2 rounded-2xl text-sm font-medium" data-filter="residential">Residential</button>
+      <button class="filter-btn px-5 py-2 rounded-2xl text-sm font-medium" data-filter="custom">Custom Builds</button>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-5">
+      
+      <!-- Project 1: Commercial Construction -->
+      <div class="portfolio-item bg-[#1a1a1f] rounded-3xl overflow-hidden border border-[#2a2a32]" data-category="commercial">
+        <div class="video-container relative">
+          <video 
+            class="w-full aspect-video object-cover" 
+            controls 
+            playsinline
+            preload="metadata">
+            <source src="videos/CommercialConstructionVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="play-overlay absolute inset-0 flex items-end justify-end p-5 pointer-events-none">
+            <div class="play-btn bg-black/70 backdrop-blur-sm text-amber-500 px-3.5 py-2.5 rounded-2xl flex items-center gap-x-2 text-xs font-semibold tracking-wider">
+              <i class="fa-solid fa-play"></i>
+              <span>PLAY</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <h4 class="font-semibold tracking-tight text-lg leading-tight">Ascent Buildings — Commercial Construction</h4>
+              <p class="text-xs text-[#64748b] mt-1">Nashville, TN • 2025</p>
+            </div>
+            <span class="shrink-0 text-[10px] font-mono px-3 py-1 rounded bg-amber-500/10 text-amber-400 self-start">COMMERCIAL</span>
+          </div>
+          <p class="mt-4 text-sm text-[#94a3b8]">High-impact brand film showcasing precision steel construction and project scale for a leading builder.</p>
+        </div>
+      </div>
+
+      <!-- Project 2: Home Builder -->
+      <div class="portfolio-item bg-[#1a1a1f] rounded-3xl overflow-hidden border border-[#2a2a32]" data-category="residential">
+        <div class="video-container relative">
+          <video 
+            class="w-full aspect-video object-cover" 
+            controls 
+            playsinline
+            preload="metadata">
+            <source src="videos/HomeBuilderVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="play-overlay absolute inset-0 flex items-end justify-end p-5 pointer-events-none">
+            <div class="play-btn bg-black/70 backdrop-blur-sm text-amber-500 px-3.5 py-2.5 rounded-2xl flex items-center gap-x-2 text-xs font-semibold tracking-wider">
+              <i class="fa-solid fa-play"></i>
+              <span>PLAY</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <h4 class="font-semibold tracking-tight text-lg leading-tight">Premium Home Builder Showcase</h4>
+              <p class="text-xs text-[#64748b] mt-1">Custom Homes • 2025</p>
+            </div>
+            <span class="shrink-0 text-[10px] font-mono px-3 py-1 rounded bg-amber-500/10 text-amber-400 self-start">RESIDENTIAL</span>
+          </div>
+          <p class="mt-4 text-sm text-[#94a3b8]">Emotional storytelling piece highlighting craftsmanship, design details, and the lifestyle of modern luxury homes.</p>
+        </div>
+      </div>
+
+      <!-- Project 3: Custom Vehicle -->
+      <div class="portfolio-item bg-[#1a1a1f] rounded-3xl overflow-hidden border border-[#2a2a32]" data-category="custom">
+        <div class="video-container relative">
+          <video 
+            class="w-full aspect-video object-cover" 
+            controls 
+            playsinline
+            preload="metadata">
+            <source src="videos/CustomVehicleVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="play-overlay absolute inset-0 flex items-end justify-end p-5 pointer-events-none">
+            <div class="play-btn bg-black/70 backdrop-blur-sm text-amber-500 px-3.5 py-2.5 rounded-2xl flex items-center gap-x-2 text-xs font-semibold tracking-wider">
+              <i class="fa-solid fa-play"></i>
+              <span>PLAY</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <h4 class="font-semibold tracking-tight text-lg leading-tight">Custom Vehicle Reveal Film</h4>
+              <p class="text-xs text-[#64748b] mt-1">Specialty Build • 2024</p>
+            </div>
+            <span class="shrink-0 text-[10px] font-mono px-3 py-1 rounded bg-amber-500/10 text-amber-400 self-start">CUSTOM</span>
+          </div>
+          <p class="mt-4 text-sm text-[#94a3b8]">Dramatic cinematic reveal for a one-of-a-kind custom vehicle build. Built for maximum visual impact.</p>
+        </div>
+      </div>
+
+      <!-- Project 4: Restaurant -->
+      <div class="portfolio-item bg-[#1a1a1f] rounded-3xl overflow-hidden border border-[#2a2a32]" data-category="commercial">
+        <div class="video-container relative">
+          <video 
+            class="w-full aspect-video object-cover" 
+            controls 
+            playsinline
+            preload="metadata">
+            <source src="videos/Restaurant%20Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="play-overlay absolute inset-0 flex items-end justify-end p-5 pointer-events-none">
+            <div class="play-btn bg-black/70 backdrop-blur-sm text-amber-500 px-3.5 py-2.5 rounded-2xl flex items-center gap-x-2 text-xs font-semibold tracking-wider">
+              <i class="fa-solid fa-play"></i>
+              <span>PLAY</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <h4 class="font-semibold tracking-tight text-lg leading-tight">RJC Restaurant — Brand Experience</h4>
+              <p class="text-xs text-[#64748b] mt-1">Hospitality • 2025</p>
+            </div>
+            <span class="shrink-0 text-[10px] font-mono px-3 py-1 rounded bg-amber-500/10 text-amber-400 self-start">COMMERCIAL</span>
+          </div>
+          <p class="mt-4 text-sm text-[#94a3b8]">Atmospheric film capturing the food, service, and ambiance that makes RJC a destination for memorable dining.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-9 text-xs text-[#64748b]">
+      All videos available in 4K • Full project libraries available upon request
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="bg-[#111113] border-y border-[#2a2a32]">
+    <div class="max-w-7xl mx-auto px-6 py-20">
+      <div class="text-center mb-14">
+        <div class="uppercase tracking-[3px] text-xs text-amber-500 font-medium">How We Work</div>
+        <h2 class="heading-font text-5xl tracking-[-1.5px] mt-2">Simple. Fast. Effective.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-5">
+        <div class="reveal flex gap-5">
+          <div class="text-6xl font-bold text-white/10 shrink-0">01</div>
+          <div>
+            <div class="font-semibold mb-1.5 text-lg">Discovery Call</div>
+            <p class="text-sm text-[#94a3b8]">We dig into your goals, audience, and unique selling points. No fluff — just the strategy that moves the needle.</p>
+          </div>
+        </div>
+        <div class="reveal flex gap-5 delay-100">
+          <div class="text-6xl font-bold text-white/10 shrink-0">02</div>
+          <div>
+            <div class="font-semibold mb-1.5 text-lg">Creative Direction</div>
+            <p class="text-sm text-[#94a3b8]">Storyboards, script, shot list, and mood. We align on vision before a single frame is shot.</p>
+          </div>
+        </div>
+        <div class="reveal flex gap-5 delay-200">
+          <div class="text-6xl font-bold text-white/10 shrink-0">03</div>
+          <div>
+            <div class="font-semibold mb-1.5 text-lg">Production + AI</div>
+            <p class="text-sm text-[#94a3b8]">On-site filming, drone, and lighting. AI tools handle cleanup, enhancement and versioning in parallel.</p>
+          </div>
+        </div>
+        <div class="reveal flex gap-5 delay-300">
+          <div class="text-6xl font-bold text-white/10 shrink-0">04</div>
+          <div>
+            <div class="font-semibold mb-1.5 text-lg">Delivery &amp; Iteration</div>
+            <p class="text-sm text-[#94a3b8]">Fast turnaround on first cut. Unlimited refinements until it sells the way you need it to.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-3xl mx-auto px-6 pt-20 pb-24">
+    <div class="text-center mb-10">
+      <div class="inline-flex items-center gap-x-2 text-xs uppercase tracking-[2.5px] text-amber-500 font-medium mb-3">
+        <div class="h-px w-8 bg-amber-500/60"></div>
+        LET'S BUILD SOMETHING GREAT
+        <div class="h-px w-8 bg-amber-500/60"></div>
+      </div>
+      <h2 class="heading-font text-5xl tracking-[-1.8px]">Ready to launch your vision?</h2>
+      <p class="mt-4 text-[#94a3b8] text-lg">Tell us about your project. We'll reply within 24 hours with next steps and a clear quote.</p>
+    </div>
+
+    <div class="bg-[#1a1a1f] border border-[#2a2a32] rounded-3xl p-9 md:p-11">
+      <form id="contact-form" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-medium tracking-wider text-[#94a3b8] mb-1.5">FULL NAME</label>
+            <input type="text" name="name" required 
+                   class="form-input w-full px-5 py-3.5 rounded-2xl text-white placeholder-[#64748b] text-base border focus:border-amber-500/70">
+          </div>
+          <div>
+            <label class="block text-xs font-medium tracking-wider text-[#94a3b8] mb-1.5">EMAIL ADDRESS</label>
+            <input type="email" name="email" required 
+                   class="form-input w-full px-5 py-3.5 rounded-2xl text-white placeholder-[#64748b] text-base border focus:border-amber-500/70">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-medium tracking-wider text-[#94a3b8] mb-1.5">PHONE (OPTIONAL)</label>
+            <input type="tel" name="phone" 
+                   class="form-input w-full px-5 py-3.5 rounded-2xl text-white placeholder-[#64748b] text-base border focus:border-amber-500/70">
+          </div>
+          <div>
+            <label class="block text-xs font-medium tracking-wider text-[#94a3b8] mb-1.5">PROJECT TYPE</label>
+            <select name="type" class="form-input w-full px-5 py-[15px] rounded-2xl text-white border focus:border-amber-500/70 bg-[#141418]">
+              <option value="">Select project type...</option>
+              <option value="Video Production">Video Production / Commercial</option>
+              <option value="Logo Animation">Logo Animation &amp; Motion</option>
+              <option value="AI Solutions">AI Video / Post Production</option>
+              <option value="Custom">Custom / Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium tracking-wider text-[#94a3b8] mb-1.5">PROJECT DETAILS</label>
+          <textarea name="message" rows="5" required placeholder="Tell us about your goals, timeline, and target audience..."
+                    class="form-input w-full resize-y px-5 py-4 rounded-3xl text-white placeholder-[#64748b] text-base border focus:border-amber-500/70"></textarea>
+        </div>
+
+        <button type="submit" 
+                class="btn-primary w-full py-4 rounded-3xl text-lg font-semibold tracking-wide flex items-center justify-center gap-x-3 active:scale-[0.985]">
+          <span>SEND INQUIRY</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <p class="text-center text-[11px] text-[#64748b]">We respect your time. No spam, ever.</p>
+      </form>
+
+      <!-- Success state -->
+      <div id="form-success" class="hidden text-center py-4">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-500/10 text-emerald-400 mb-4">
+          <i class="fa-solid fa-check text-3xl"></i>
+        </div>
+        <h3 class="text-2xl font-semibold tracking-tight">Thank you — message received.</h3>
+        <p class="text-[#94a3b8] mt-2 max-w-xs mx-auto">Chris will personally reply within one business day. Looking forward to creating with you.</p>
+        <button onclick="resetContactForm()" 
+                class="mt-6 text-sm font-medium text-amber-500 hover:text-amber-400 underline underline-offset-4">
+          Send another message
+        </button>
+      </div>
+    </div>
+
+    <div class="text-center mt-8 text-xs text-[#64748b]">
+      Prefer email? <a href="mailto:webbspinnervisions@gmail.com" class="text-amber-500 hover:underline">webbspinnervisions@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div class="max-w-3xl mx-auto px-6 pb-14 text-center">
+    <div class="inline-block rounded-3xl border border-[#2a2a32] px-8 py-6 bg-[#1a1a1f]">
+      <p class="text-[#94a3b8]">Need something fast? We offer <span class="text-white font-medium">rush turnaround</span> and <span class="text-white font-medium">same-week delivery</span> for time-sensitive campaigns.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[#2a2a32] bg-black/40 py-10 text-xs">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-y-4 text-[#64748b]">
+      <div class="flex items-center gap-x-2">
+        <img src="WSV LOGO.jpg" alt="" class="h-5 w-5 opacity-70">
+        <span>© <span id="year">2026</span> Webb Spinner Visions</span>
+      </div>
+      <div class="flex items-center gap-x-6">
+        <span>Nashville, Tennessee</span>
+        <a href="mailto:webbspinnervisions@gmail.com" class="hover:text-amber-400 transition-colors">webbspinnervisions@gmail.com</a>
+      </div>
+      <div class="flex gap-x-4 text-base">
+        <a href="#" class="hover:text-white transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-white transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" class="hover:text-white transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Load custom JS -->
+  <script src="js/main.js"></script>
+
+  <!-- Inline enhancements -->
+  <script>
+    // Tailwind script config
+    function configureTailwind() {
+      if (typeof tailwind !== 'undefined') {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                charcoal: '#0c0c0e',
+                panel: '#1a1a1f',
+                'steel-dark': '#64748b',
+                steel: '#94a3b8',
+                border: '#2a2a32'
+              }
+            }
+          }
+        };
+      }
+    }
+    configureTailwind();
+
+    // Year is handled in main.js, but ensure fallback
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearEl = document.getElementById('year');
+      if (yearEl && !yearEl.textContent.trim()) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      // Optional: clicking play overlay focuses + plays the video
+      document.querySelectorAll('.portfolio-item').forEach(item => {
+        const video = item.querySelector('video');
+        const playBtn = item.querySelector('.play-btn');
+        
+        if (video && playBtn) {
+          playBtn.style.pointerEvents = 'auto';
+          playBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (video.paused) {
+              video.play();
+            } else {
+              video.pause();
+            }
+          });
+          
+          video.addEventListener('play', () => {
+            playBtn.style.opacity = '0.15';
+          });
+          video.addEventListener('pause', () => {
+            playBtn.style.opacity = '';
+          });
+        }
+      });
+
+      // Keyboard escape closes mobile menu if open
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const menu = document.getElementById('mobile-menu');
+          if (menu && menu.classList.contains('open')) {
+            menu.classList.remove('open');
+            document.body.style.overflow = '';
+          }
+        }
+      });
+    });
+
+    function resetContactForm() {
+      const form = document.getElementById('contact-form');
+      const success = document.getElementById('form-success');
+      if (form && success) {
+        form.classList.remove('hidden');
+        success.classList.add('hidden');
+        form.reset();
+      }
+    }
+
+    // Mobile menu backdrop + enhanced open/close integration (works alongside main.js)
+    document.addEventListener('DOMContentLoaded', () => {
+      const backdrop = document.getElementById('mobile-menu-backdrop');
+      const menu = document.getElementById('mobile-menu');
+
+      // Helper to sync backdrop with menu state
+      const syncBackdrop = () => {
+        if (!backdrop || !menu) return;
+        const isOpen = menu.classList.contains('open');
+        if (isOpen) {
+          backdrop.style.transition = 'opacity 200ms ease';
+          backdrop.style.opacity = '1';
+          backdrop.style.pointerEvents = 'auto';
+        } else {
+          backdrop.style.opacity = '0';
+          backdrop.style.pointerEvents = 'none';
+        }
+      };
+
+      // Watch for class changes on the menu (in case main.js toggles it)
+      if (menu) {
+        const observer = new MutationObserver(syncBackdrop);
+        observer.observe(menu, { attributes: true, attributeFilter: ['class'] });
+      }
+
+      // Initial state
+      if (backdrop) {
+        backdrop.style.opacity = '0';
+        backdrop.style.pointerEvents = 'none';
+      }
+
+      // Re-attach / ensure backdrop click works even if timing differs
+      if (backdrop && menu) {
+        backdrop.addEventListener('click', () => {
+          menu.classList.remove('open');
+          document.body.style.overflow = '';
+          syncBackdrop();
+        });
+      }
+
+      // Keyboard already handled above — just ensure sync on escape too
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu && menu.classList.contains('open')) {
+          syncBackdrop();
+        }
+      }, { once: false });
+    });
+  </script>
+</body>
+</html>
