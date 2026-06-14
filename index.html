@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     html { scroll-behavior: smooth; }
+    .spider { transition: all 0.4s ease; }
+    .spider:hover { transform: scale(1.08) rotate(8deg); }
+    .card { transition: all 0.3s ease; }
+    .card:hover { transform: translateY(-12px) scale(1.02); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5); }
+    .nav-link { position: relative; transition: color 0.3s; }
+    .nav-link:after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #f97316; transition: width 0.3s; }
+    .nav-link:hover:after { width: 100%; }
   </style>
 </head>
 <body class="bg-black text-white">
@@ -16,13 +23,13 @@
   <nav class="fixed top-0 w-full bg-black/90 border-b border-red-600/60 z-50 backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <span class="text-3xl">🕷️</span>
+        <span class="text-3xl spider">🕷️</span>
         <span class="text-2xl font-bold tracking-widest">WEBB SPINNER VISIONS</span>
       </div>
       <div class="hidden md:flex gap-8 text-sm font-medium">
-        <a href="#portfolio" class="hover:text-red-400 transition-colors">Portfolio</a>
-        <a href="#services" class="hover:text-red-400 transition-colors">Services</a>
-        <a href="#contact" class="hover:text-red-400 transition-colors">Contact</a>
+        <a href="#portfolio" class="nav-link hover:text-red-400 transition-colors">Portfolio</a>
+        <a href="#services" class="nav-link hover:text-red-400 transition-colors">Services</a>
+        <a href="#contact" class="nav-link hover:text-red-400 transition-colors">Contact</a>
       </div>
     </div>
   </nav>
@@ -30,7 +37,7 @@
   <!-- HERO -->
   <section class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-16">
     <div class="absolute inset-0 flex items-center justify-center">
-      <img src="WSV LOGO.jpg" alt="Webb Spinner Visions" class="max-w-[980px] w-full opacity-95">
+      <img src="WSV LOGO.jpg" alt="Webb Spinner Visions" class="max-w-[980px] w-full opacity-95 spider">
     </div>
     <div class="relative z-10 text-center px-6">
       <h1 class="text-[68px] md:text-[92px] font-bold tracking-[-4px] leading-none mb-4">
@@ -44,37 +51,34 @@
   <section id="portfolio" class="py-20 bg-zinc-950">
     <div class="max-w-7xl mx-auto px-6">
 
-      <!-- FEATURED VIDEO -->
+      <!-- Featured -->
       <div class="mb-16">
         <h2 class="text-4xl font-bold mb-6">Featured Project</h2>
         <div class="bg-black rounded-3xl overflow-hidden border border-white/10">
-          <iframe class="w-full aspect-video" 
-                  src="https://www.youtube.com/embed/IbhZojsSSsg" 
-                  title="Webb Spinner Visions - AI Solutions Showcase" 
-                  frameborder="0" allowfullscreen loading="lazy"></iframe>
+          <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/IbhZojsSSsg" frameborder="0" allowfullscreen loading="lazy"></iframe>
           <div class="p-8">
             <h3 class="text-3xl font-semibold">AI Solutions & Graphic Design Showcase</h3>
-            <p class="text-gray-400">Behind-the-scenes look at our AI-powered video production, graphic design work, and creative process for modern businesses.</p>
+            <p class="text-gray-400">Behind-the-scenes look at our AI-powered video production and graphic design work.</p>
           </div>
         </div>
       </div>
 
-      <!-- 4 SAMPLE VIDEOS -->
+      <!-- 4 Videos -->
       <h2 class="text-4xl font-bold mb-8">More Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/10">
+        <div class="card bg-black rounded-3xl overflow-hidden border border-white/10">
           <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/TqUbd7HyNUo" frameborder="0" allowfullscreen loading="lazy"></iframe>
           <div class="p-6"><h3 class="font-semibold">Commercial Construction</h3></div>
         </div>
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/10">
+        <div class="card bg-black rounded-3xl overflow-hidden border border-white/10">
           <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/YuyJKJcaPGY" frameborder="0" allowfullscreen loading="lazy"></iframe>
           <div class="p-6"><h3 class="font-semibold">Home Builder Masterclass</h3></div>
         </div>
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/10">
+        <div class="card bg-black rounded-3xl overflow-hidden border border-white/10">
           <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/7nM4UF3J6TQ" frameborder="0" allowfullscreen loading="lazy"></iframe>
           <div class="p-6"><h3 class="font-semibold">Custom Vehicle Showcase</h3></div>
         </div>
-        <div class="bg-black rounded-3xl overflow-hidden border border-white/10">
+        <div class="card bg-black rounded-3xl overflow-hidden border border-white/10">
           <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/Ga7R0sbnzpc" frameborder="0" allowfullscreen loading="lazy"></iframe>
           <div class="p-6"><h3 class="font-semibold">Restaurant Branding</h3></div>
         </div>
@@ -87,19 +91,19 @@
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10">
+        <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10 hover:bg-zinc-900 transition-colors">
           <h3 class="text-2xl font-semibold mb-4">Video Production</h3>
           <p class="text-gray-400">Commercials, masterclass videos, and promotional content that actually converts.</p>
         </div>
-        <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10">
+        <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10 hover:bg-zinc-900 transition-colors">
           <h3 class="text-2xl font-semibold mb-4">Animation & Logo Design</h3>
           <p class="text-gray-400">Cinematic logo reveals and motion graphics that make your brand unforgettable.</p>
         </div>
-        <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10">
+        <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10 hover:bg-zinc-900 transition-colors">
           <h3 class="text-2xl font-semibold mb-4">AI Consulting</h3>
           <p class="text-gray-400">Practical AI implementation to help your business create better content faster.</p>
         </div>
-        <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10">
+        <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10 hover:bg-zinc-900 transition-colors">
           <h3 class="text-2xl font-semibold mb-4">AI-Enhanced Production</h3>
           <p class="text-gray-400">Combine AI tools with professional storytelling for faster, smarter results.</p>
         </div>
@@ -112,7 +116,7 @@
     <div class="max-w-xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-6">Ready to Stand Out?</h2>
       <p class="text-gray-400 mb-10">Let’s create videos and branding that actually sell and build lasting relationships.</p>
-      <a href="mailto:webbspinnervisions@gmail.com" class="inline-block bg-red-600 hover:bg-red-700 px-12 py-5 rounded-2xl text-xl font-bold transition">
+      <a href="mailto:webbspinnervisions@gmail.com" class="inline-block bg-red-600 hover:bg-red-700 px-12 py-5 rounded-2xl text-xl font-bold transition hover:scale-105">
         webbspinnervisions@gmail.com
       </a>
     </div>
