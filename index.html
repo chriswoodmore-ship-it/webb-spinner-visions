@@ -3,51 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Webb Spinner Visions | Masterclass Video Production, Cinematic Logo Animation &amp; AI Solutions. Based in Gallatin/Nashville, TN. 30+ years of sales &amp; storytelling expertise turned into videos that sell.">
   <title>Webb Spinner Visions | Video Production • Animation • AI Solutions | Nashville, TN</title>
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-    .heading { font-family: 'Space Grotesk', sans-serif; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+    
+    body {
+      font-family: 'Inter', system_ui, sans-serif;
+    }
+    
+    .heading-font {
+      font-family: 'Space Grotesk', 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+    }
 
     .cinematic-hero {
-      background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.85)), url('./Shield.jpg') center/cover no-repeat;
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)), 
+                  url('./WSV LOGO.jpg') center/cover no-repeat;
+      background-size: cover;
+      background-position: center;
     }
-    .electric-web {
-      position: absolute;
-      top: 15%;
-      left: 10%;
-      font-size: 260px;
-      color: #67e8f9;
-      animation: webGlow 3s ease-in-out infinite alternate;
-      text-shadow: 0 0 30px #67e8f9, 0 0 60px #c084fc, 0 0 120px #e0f2fe;
-      opacity: 0.4;
-    }
-    @keyframes webGlow { 0% { transform: rotate(-12deg) scale(0.9); } 100% { transform: rotate(12deg) scale(1.15); } }
 
-    .spider-jump {
-      position: absolute;
-      top: 22%;
-      left: 20%;
-      font-size: 110px;
-      animation: spiderLeap 4.2s ease-in-out infinite;
-      filter: drop-shadow(0 0 35px #f97316);
+    .section-header {
+      font-size: 2.75rem;
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: -0.04em;
     }
-    @keyframes spiderLeap {
-      0%, 100% { transform: translateY(0) rotate(-10deg); }
-      50% { transform: translateY(-80px) rotate(30deg) scale(1.3); }
+
+    .service-card {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                  box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .nav-link {
+      transition: color 0.2s ease;
+    }
+    
+    .nav-link:hover {
+      color: #e11d48;
     }
 
     .marquee {
-      animation: marquee 20s linear infinite;
-      font-size: 1.75rem;
-      font-weight: 700;
-      padding: 18px 0;
+      animation: marquee 30s linear infinite;
     }
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .portfolio-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.1);
+    }
+
+    .spinning-x {
+      animation: spin 8s linear infinite;
+    }
+    
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 1rem;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .stat-number {
+      font-variant-numeric: tabular-nums;
+    }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
@@ -57,20 +110,33 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex items-center justify-between h-20">
         <div class="flex items-center gap-x-3">
-          <img src="./Shield.jpg" alt="Webb Spinner Visions" class="h-12">
-          <span class="font-bold text-3xl tracking-tighter heading">WEBB SPINNER <span class="text-red-500">VISIONS</span></span>
+          <div class="w-10 h-10 bg-red-600 rounded-2xl flex items-center justify-center shadow-lg shadow-red-600/30">
+            <i class="fa-solid fa-spider text-white text-3xl"></i>
+          </div>
+          <div>
+            <span class="font-bold text-3xl tracking-tighter">WEBB SPINNER</span>
+            <span class="font-semibold text-red-500 text-3xl tracking-tighter">VISIONS</span>
+          </div>
         </div>
-        <div class="hidden md:flex gap-x-8 text-sm font-medium">
-          <a href="#services" class="hover:text-red-400">Services</a>
-          <a href="#work" class="hover:text-red-400">Work</a>
-          <a href="#about" class="hover:text-red-400">About</a>
-          <a href="#contact" class="hover:text-red-400">Contact</a>
+
+        <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+          <a href="#services" class="nav-link text-zinc-300 hover:text-white">Services</a>
+          <a href="#work" class="nav-link text-zinc-300 hover:text-white">Work</a>
+          <a href="#about" class="nav-link text-zinc-300 hover:text-white">About</a>
+          <a href="#contact" class="nav-link text-zinc-300 hover:text-white">Contact</a>
         </div>
-        <div class="flex items-center gap-3">
-          <a href="https://x.com/Webb__X" target="_blank" class="px-5 py-2 border border-zinc-700 rounded-full flex gap-2 hover:bg-zinc-900">
-            <i class="fa-brands fa-x-twitter"></i> @Webb__X
+
+        <div class="flex items-center gap-x-3">
+          <a href="https://x.com/Webb__X" target="_blank" 
+             class="hidden sm:flex items-center gap-x-2 px-4 py-2 rounded-2xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 transition-all group">
+            <i class="fa-brands fa-x-twitter text-xl text-white group-hover:text-red-400 spinning-x"></i>
+            <span class="text-sm font-semibold">@Webb__X</span>
           </a>
-          <a href="#contact" class="bg-red-600 px-6 py-2.5 rounded-full font-semibold">Start Your Project</a>
+          
+          <a href="#contact" 
+             class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-2xl text-sm transition-all active:scale-[0.985]">
+            Start Your Project
+          </a>
         </div>
       </div>
     </div>
@@ -78,61 +144,307 @@
 
   <!-- HERO -->
   <section class="cinematic-hero min-h-[100dvh] flex items-center justify-center pt-20 relative">
-    <div class="electric-web">🕸️</div>
-    <div class="spider-jump">🕷️</div>
     <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-      <h1 class="text-7xl md:text-8xl lg:text-[96px] font-bold tracking-tighter heading">WEBB SPINNER<br>VISIONS</h1>
-      <p class="text-3xl text-zinc-200 mt-4">Masterclass video production. Cinematic animation. <span class="text-red-400">AI that actually sells.</span></p>
-      <p class="mt-6">30+ years of real sales & estimating experience turned into videos that close deals.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-        <a href="#work" class="px-9 py-4 bg-white text-zinc-950 font-semibold rounded-3xl flex items-center gap-2">Watch Our Work ▶️</a>
-        <a href="#contact" class="px-9 py-4 border border-white rounded-3xl">Get a Custom Quote</a>
+      <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
+        <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+        <span class="text-sm font-medium tracking-widest">GALLATIN / NASHVILLE, TN • SERVING CLIENTS NATIONWIDE</span>
+      </div>
+      
+      <h1 class="text-7xl md:text-8xl lg:text-[92px] font-bold tracking-tighter leading-[0.9] mb-6">
+        WEBB SPINNER<br>VISIONS
+      </h1>
+      
+      <p class="max-w-2xl mx-auto text-2xl md:text-3xl text-zinc-200 font-light tracking-tight mb-4">
+        Masterclass video production.<br>
+        Cinematic animation.<br>
+        <span class="text-red-400 font-medium">AI that actually sells.</span>
+      </p>
+
+      <p class="max-w-md mx-auto text-lg text-zinc-400 mb-10">
+        30+ years of real sales &amp; estimating experience turned into videos that close deals.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#work" 
+           class="group inline-flex items-center justify-center gap-x-3 w-full sm:w-auto px-9 py-4 text-lg font-semibold bg-white text-zinc-950 rounded-3xl transition-all active:scale-[0.985]">
+          <span>Watch Our Work</span>
+          <i class="fa-solid fa-play ml-1 group-hover:translate-x-0.5 transition"></i>
+        </a>
+        <a href="#contact" 
+           class="inline-flex items-center justify-center w-full sm:w-auto px-9 py-4 text-lg font-semibold border border-white/30 hover:bg-white/5 rounded-3xl transition-all">
+          Get a Custom Quote
+        </a>
+      </div>
+      
+      <div class="mt-10 text-sm text-red-400 font-medium">
+        Limited slots available for July &amp; August 2026
       </div>
     </div>
   </section>
 
-  <!-- BIG RED TICKER -->
-  <div class="bg-red-600 py-5 overflow-hidden border-y-4 border-red-700">
-    <div class="marquee flex whitespace-nowrap text-white">
-      🔥 LIMITED-TIME OPENING SPECIAL 🔥 • 3×60s videos only $500 • Cinematic logo animation $150 • Book before spots fill up • 🔥 LIMITED-TIME OPENING SPECIAL 🔥
+  <!-- PROMO MARQUEE - Pricing Banner -->
+  <div class="bg-red-600 py-3 overflow-hidden border-y border-red-700">
+    <div class="flex whitespace-nowrap">
+      <div class="inline-flex items-center gap-x-12 animate-marquee text-white font-semibold text-lg tracking-tight px-4">
+        <span>🔥 LIMITED-TIME OPENING SPECIAL</span>
+        <span class="text-red-200">•</span>
+        <span>3 × 60-second videos — only $500</span>
+        <span class="text-red-200">•</span>
+        <span>Cinematic logo animation — $150</span>
+        <span class="text-red-200">•</span>
+        <span>Book before spots fill up</span>
+      </div>
+      <div class="inline-flex items-center gap-x-12 animate-marquee text-white font-semibold text-lg tracking-tight px-4" aria-hidden="true">
+        <span>🔥 LIMITED-TIME OPENING SPECIAL</span>
+        <span class="text-red-200">•</span>
+        <span>3 × 60-second videos — only $500</span>
+        <span class="text-red-200">•</span>
+        <span>Cinematic logo animation — $150</span>
+        <span class="text-red-200">•</span>
+        <span>Book before spots fill up</span>
+      </div>
     </div>
   </div>
 
   <!-- SERVICES -->
-  <section id="services" class="max-w-7xl mx-auto px-6 py-20">
-    <h2 class="text-center text-5xl font-bold">Videos that perform.</h2>
-    <div class="grid md:grid-cols-3 gap-6 mt-12">
-      <div class="bg-zinc-900 p-8 rounded-3xl">Masterclass Video Production</div>
-      <div class="bg-zinc-900 p-8 rounded-3xl">Cinematic Logo Animation</div>
-      <div class="bg-zinc-900 p-8 rounded-3xl">AI Solutions & Workflow Engineering</div>
+  <section id="services" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
+    <div class="text-center mb-14">
+      <div class="inline-block px-4 py-1 rounded-full bg-zinc-900 text-red-400 text-xs font-semibold tracking-[2px] mb-4">WHAT WE DELIVER</div>
+      <h2 class="section-header">Videos that don't just look good.<br>They <span class="text-red-400">perform</span>.</h2>
+      <p class="mt-4 max-w-md mx-auto text-lg text-zinc-400">Every project is built with 30+ years of real sales experience. We don't make pretty videos — we make videos that close deals.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8 group">
+        <div class="w-14 h-14 bg-red-950 text-red-400 rounded-2xl flex items-center justify-center mb-7 group-hover:bg-red-600 group-hover:text-white transition-colors">
+          <i class="fa-solid fa-video text-3xl"></i>
+        </div>
+        <h3 class="text-3xl font-semibold tracking-tight mb-3">Masterclass Video Production</h3>
+        <p class="text-zinc-400 leading-relaxed">Commercials, brand films, project showcases, and sales presentations. We turn your expertise into compelling stories that build trust and drive action — fast.</p>
+      </div>
+
+      <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8 group">
+        <div class="w-14 h-14 bg-red-950 text-red-400 rounded-2xl flex items-center justify-center mb-7 group-hover:bg-red-600 group-hover:text-white transition-colors">
+          <i class="fa-solid fa-magic text-3xl"></i>
+        </div>
+        <h3 class="text-3xl font-semibold tracking-tight mb-3">Cinematic Logo Animation &amp; Motion</h3>
+        <p class="text-zinc-400 leading-relaxed">Explosive logo reveals, 3D motion graphics, and branded animations that stop the scroll. Perfect for intros, social media, proposals, and trade show loops.</p>
+      </div>
+
+      <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-8 group">
+        <div class="w-14 h-14 bg-red-950 text-red-400 rounded-2xl flex items-center justify-center mb-7 group-hover:bg-red-600 group-hover:text-white transition-colors">
+          <i class="fa-solid fa-robot text-3xl"></i>
+        </div>
+        <h3 class="text-3xl font-semibold tracking-tight mb-3">AI Solutions &amp; Workflow Engineering</h3>
+        <p class="text-zinc-400 leading-relaxed">Custom AI tools, automated video pipelines, prompt engineering, and training content. We help companies adopt AI practically — without the hype.</p>
+      </div>
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
-  <section id="work" class="bg-zinc-900 py-20">
-    <h2 class="text-center text-5xl font-bold">Recent Work</h2>
-    <div class="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto px-6 mt-12">
-      <div>
-        <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/Ga7R0sbnzpc" allowfullscreen></iframe>
-        <p class="text-red-400">★ Roux's Creole Cafe - Hero Brand Video</p>
+  <!-- PORTFOLIO / WORK -->
+  <section id="work" class="bg-black py-20 border-y border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-4 mb-12">
+        <div>
+          <div class="text-red-400 text-sm font-semibold tracking-[2px]">RECENT CLIENT WORK</div>
+          <h2 class="section-header mt-2">See what great video<br>actually looks like.</h2>
+        </div>
+        <a href="https://www.youtube.com/@WebbSpinnerVideos" target="_blank" class="inline-flex items-center text-red-400 hover:text-red-300 font-medium group">
+          View full YouTube channel 
+          <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i>
+        </a>
       </div>
-      <!-- Other 3 videos can be added the same way -->
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        
+        <!-- Featured Hero / Brand Video (Roux's) -->
+        <div class="portfolio-card bg-zinc-900 rounded-3xl overflow-hidden border border-red-500/50 ring-1 ring-red-500/20">
+          <div class="p-5 border-b border-zinc-800 flex items-center justify-between bg-zinc-950">
+            <div>
+              <div class="font-semibold text-xl tracking-tight flex items-center gap-x-2">
+                <span class="text-red-400">★</span> Hero Brand Video
+              </div>
+              <div class="text-red-400 text-sm">Roux's Creole Cafe • Logo Animation + Promo</div>
+            </div>
+            <div class="text-xs px-3 py-1 rounded-full bg-red-600 text-white font-medium">FEATURED</div>
+          </div>
+          <div class="video-container bg-black">
+            <iframe src="https://www.youtube.com/embed/Ga7R0sbnzpc" title="Roux's Creole Cafe - Hero Brand Video" allowfullscreen></iframe>
+          </div>
+          <div class="p-5 text-sm text-zinc-400">
+            Our flagship example: Explosive custom logo animation, glowing gem effects, festive Mardi Gras overlays, and strong sales messaging. This is the quality level we deliver for every client.
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="portfolio-card bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800">
+          <div class="p-5 border-b border-zinc-800">
+            <div class="font-semibold text-xl tracking-tight">Commercial Construction Showcase</div>
+            <div class="text-red-400 text-sm">Metal Buildings • IMP Panels • Project Visuals</div>
+          </div>
+          <div class="video-container bg-black">
+            <iframe src="https://www.youtube.com/embed/TqUbd7HyNUo" title="Commercial Construction Video" allowfullscreen></iframe>
+          </div>
+          <div class="p-5 text-sm text-zinc-400">
+            High-impact visual storytelling for construction clients. Perfect for bids, websites, and sales presentations.
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="portfolio-card bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800">
+          <div class="p-5 border-b border-zinc-800">
+            <div class="font-semibold text-xl tracking-tight">Custom Home Builder Branding</div>
+            <div class="text-red-400 text-sm">Randy Jones Construction Style • Masterclass Video</div>
+          </div>
+          <div class="video-container bg-black">
+            <iframe src="https://www.youtube.com/embed/YuyJKJcaPGY" title="Home Builder Video" allowfullscreen></iframe>
+          </div>
+          <div class="p-5 text-sm text-zinc-400">
+            Turning still photos of beautiful homes into emotional, sales-driving video content with smooth animations.
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="portfolio-card bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800">
+          <div class="p-5 border-b border-zinc-800">
+            <div class="font-semibold text-xl tracking-tight">Premium Vehicle &amp; Product Showcase</div>
+            <div class="text-red-400 text-sm">Custom Detailing • AI-Enhanced Production</div>
+          </div>
+          <div class="video-container bg-black">
+            <iframe src="https://www.youtube.com/embed/7nM4UF3J6TQ" title="Custom Vehicle Video" allowfullscreen></iframe>
+          </div>
+          <div class="p-5 text-sm text-zinc-400">
+            Example of transforming product photography into scroll-stopping video using AI tools and cinematic techniques.
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="mt-8 text-center text-xs text-zinc-500">
+        All videos are 100% custom. No templates. Every frame is crafted to match your brand and sales goals.
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-5xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-12 gap-x-12 items-center">
+      <div class="md:col-span-7">
+        <div class="text-red-400 text-sm font-semibold tracking-[2px] mb-3">THE WEBB SPINNER DIFFERENCE</div>
+        <h2 class="section-header">Not another video guy.<br>A sales veteran who learned to direct.</h2>
+        
+        <div class="prose prose-invert text-lg text-zinc-300 mt-6 max-w-prose">
+          <p>After 30+ years in structural steel estimating, value engineering, and design-build sales, I discovered something powerful: the best videos don’t just show what you do — they make buyers feel the outcome.</p>
+          <p class="mt-4">That’s why Webb Spinner Visions exists. I combine deep industry knowledge (especially construction &amp; manufacturing) with modern video craft and practical AI tools to deliver content that actually moves the needle.</p>
+        </div>
+      </div>
+      
+      <div class="md:col-span-5 mt-10 md:mt-0">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+          <div class="grid grid-cols-2 gap-6 text-center">
+            <div>
+              <div class="text-5xl font-bold text-red-400 stat-number">30</div>
+              <div class="text-xs tracking-widest text-zinc-400 mt-1">YEARS IN SALES &amp;<br>ESTIMATING</div>
+            </div>
+            <div>
+              <div class="text-5xl font-bold text-red-400 stat-number">650k</div>
+              <div class="text-xs tracking-widest text-zinc-400 mt-1">DOLLARS IN ESTIMATING<br>LOSSES REDUCED</div>
+            </div>
+            <div class="col-span-2 pt-4 border-t border-zinc-700 text-sm">
+              <span class="font-medium">Now helping companies tell their story</span><br>
+              with the same precision I once used to win projects.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="bg-zinc-900 py-16 border-y border-zinc-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-semibold tracking-tight">How we work together</h2>
+        <p class="text-zinc-400 mt-3 max-w-md mx-auto">Simple. Fast. No surprises.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="mx-auto w-12 h-12 rounded-2xl bg-zinc-950 flex items-center justify-center mb-4"><span class="font-mono text-red-400 text-xl">01</span></div>
+          <div class="font-semibold mb-1">Discovery Call</div>
+          <div class="text-sm text-zinc-400">15–20 min. We learn your goals, audience, and must-have messages.</div>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto w-12 h-12 rounded-2xl bg-zinc-950 flex items-center justify-center mb-4"><span class="font-mono text-red-400 text-xl">02</span></div>
+          <div class="font-semibold mb-1">Concept &amp; Script</div>
+          <div class="text-sm text-zinc-400">You get a clear creative direction + script within 24–48 hours.</div>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto w-12 h-12 rounded-2xl bg-zinc-950 flex items-center justify-center mb-4"><span class="font-mono text-red-400 text-xl">03</span></div>
+          <div class="font-semibold mb-1">Production &amp; AI Polish</div>
+          <div class="text-sm text-zinc-400">Filming/animation + AI enhancements. First cut usually in 3–7 days.</div>
+        </div>
+        <div class="text-center">
+          <div class="mx-auto w-12 h-12 rounded-2xl bg-zinc-950 flex items-center justify-center mb-4"><span class="font-mono text-red-400 text-xl">04</span></div>
+          <div class="font-semibold mb-1">Final Delivery</div>
+          <div class="text-sm text-zinc-400">Revisions included. You receive master files + social-ready versions.</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="max-w-3xl mx-auto px-6 py-20 text-center">
-    <h2 class="text-6xl font-bold">Ready to launch your vision?</h2>
-    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="mailto:info@webbspinnervisions.com" class="bg-red-600 px-10 py-5 rounded-3xl">📧 Email Us</a>
-      <a href="https://x.com/Webb__X" target="_blank" class="border border-white px-10 py-5 rounded-3xl">✕ Message on X</a>
+    <div class="mb-8">
+      <div class="inline-block px-5 py-1.5 rounded-full bg-red-950 text-red-400 text-xs font-bold tracking-[3px]">LET'S CREATE SOMETHING THAT SELLS</div>
     </div>
-    <p class="mt-8 text-zinc-500">info@webbspinnervisions.com (forwards to webbspinnervisions@gmail.com)</p>
+    
+    <h2 class="text-6xl font-bold tracking-tighter">Ready to launch<br>your vision?</h2>
+    <p class="mt-4 text-xl text-zinc-400 max-w-md mx-auto">Whether you need one killer logo animation or a full video campaign, let's talk about what will move the needle for your business.</p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="mailto:info@webbspinnervisions.com" 
+         class="flex-1 sm:flex-none inline-flex items-center justify-center gap-x-3 bg-red-600 hover:bg-red-700 transition px-10 py-5 text-xl font-semibold rounded-3xl">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email Us</span>
+      </a>
+      
+      <a href="https://x.com/Webb__X" target="_blank"
+         class="flex-1 sm:flex-none inline-flex items-center justify-center gap-x-3 border border-white/20 hover:bg-white/5 px-10 py-5 text-xl font-semibold rounded-3xl transition">
+        <i class="fa-brands fa-x-twitter"></i>
+        <span>Message on X</span>
+      </a>
+    </div>
+
+    <div class="mt-8 text-sm text-zinc-500">
+      Christopher Woodmore • Gallatin, Tennessee (Nashville Metro)<br>
+      <a href="mailto:info@webbspinnervisions.com" class="hover:text-zinc-300">info@webbspinnervisions.com</a><br>
+      <span class="text-xs">(forwards to webbspinnervisions@gmail.com)</span>
+    </div>
   </section>
 
-  <footer class="py-8 text-center text-xs">
-    © 2026 Webb Spinner Visions. All rights reserved. Gallatin, TN • Built with ❤️ and a little AI magic
+  <footer class="border-t border-zinc-800 py-8 text-xs text-zinc-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-y-3 text-center md:text-left">
+      <div>© 2026 Webb Spinner Visions. All rights reserved. Gallatin, TN.</div>
+      <div class="flex items-center justify-center gap-x-5">
+        <a href="https://x.com/Webb__X" class="hover:text-white transition">X / Twitter</a>
+        <span class="text-zinc-700">•</span>
+        <span>Built with ❤️ and a little AI magic</span>
+      </div>
+    </div>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const marqueeContainers = document.querySelectorAll('.bg-red-600');
+      marqueeContainers.forEach(container => {
+        const marquee = container.querySelector('.animate-marquee');
+        if (marquee) {
+          container.addEventListener('mouseenter', () => marquee.style.animationPlayState = 'paused');
+          container.addEventListener('mouseleave', () => marquee.style.animationPlayState = 'running');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
