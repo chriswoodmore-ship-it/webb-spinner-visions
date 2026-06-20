@@ -17,8 +17,14 @@
     .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
     .nav-link { transition: color 0.2s ease; }
     .nav-link:hover { color: #e11d48; }
-    .marquee { animation: marquee 14s linear infinite; }
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .animate-marquee {
+      animation: marquee 28s linear infinite;
+      will-change: transform;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
     .portfolio-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
     .portfolio-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.1); }
     .spinning-x { animation: spin 8s linear infinite; }
@@ -57,12 +63,12 @@
     </div>
   </nav>
 
-  <!-- CUSTOM GLSL VERTEX SHADER SIMULATION BANNER (WebGL-level) -->
+  <!-- SPIDER BANNER -->
   <div id="spiderBanner" class="sticky top-20 z-[60] h-28 w-full bg-zinc-950 border-b border-amber-400 overflow-hidden">
     <canvas id="spiderCanvas" class="w-full h-full"></canvas>
   </div>
 
-  <!-- HERO + ALL ORIGINAL SECTIONS FULLY RESTORED -->
+  <!-- HERO -->
   <section class="cinematic-hero min-h-[100dvh] flex items-center justify-center pt-20 relative">
     <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
       <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
@@ -80,22 +86,22 @@
     </div>
   </section>
 
-  <!-- FULLY SCROLLING RED TICKER -->
+  <!-- FIXED SCROLLING RED TICKER (mobile-friendly) -->
   <div class="bg-red-600 py-5 overflow-hidden border-y border-red-700">
-    <div class="flex whitespace-nowrap">
-      <div class="inline-flex items-center gap-x-12 animate-marquee text-white font-bold text-xl md:text-2xl px-8">
-        🔥 LIMITED-TIME OPENING SPECIAL • 3×60s videos — only $500 • Cinematic logo animation — $150 • Book before spots fill up • Spots disappearing fast • July slots almost gone • 
+    <div class="flex whitespace-nowrap w-full">
+      <div class="inline-flex items-center gap-x-10 animate-marquee text-white font-bold text-lg md:text-2xl px-6">
+        🔥 LIMITED-TIME SPECIAL • 3×60s videos only $500 • Logo animation $150 • Book July &amp; Aug slots now! Limited spots • 
       </div>
-      <div class="inline-flex items-center gap-x-12 animate-marquee text-white font-bold text-xl md:text-2xl px-8" aria-hidden="true">
-        🔥 LIMITED-TIME OPENING SPECIAL • 3×60s videos — only $500 • Cinematic logo animation — $150 • Book before spots fill up • Spots disappearing fast • July slots almost gone • 
+      <div class="inline-flex items-center gap-x-10 animate-marquee text-white font-bold text-lg md:text-2xl px-6" aria-hidden="true">
+        🔥 LIMITED-TIME SPECIAL • 3×60s videos only $500 • Logo animation $150 • Book July &amp; Aug slots now! Limited spots • 
       </div>
-      <div class="inline-flex items-center gap-x-12 animate-marquee text-white font-bold text-xl md:text-2xl px-8" aria-hidden="true">
-        🔥 LIMITED-TIME OPENING SPECIAL • 3×60s videos — only $500 • Cinematic logo animation — $150 • Book before spots fill up • Spots disappearing fast • July slots almost gone • 
+      <div class="inline-flex items-center gap-x-10 animate-marquee text-white font-bold text-lg md:text-2xl px-6" aria-hidden="true">
+        🔥 LIMITED-TIME SPECIAL • 3×60s videos only $500 • Logo animation $150 • Book July &amp; Aug slots now! Limited spots • 
       </div>
     </div>
   </div>
 
-  <!-- SERVICES, PORTFOLIO, ABOUT, PROCESS, CONTACT, FOOTER (FULL ORIGINAL) -->
+  <!-- SERVICES -->
   <section id="services" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
     <div class="text-center mb-14">
       <div class="inline-block px-4 py-1 rounded-full bg-zinc-900 text-red-400 text-xs font-semibold tracking-[2px] mb-4">WHAT WE DELIVER</div>
@@ -121,6 +127,7 @@
     </div>
   </section>
 
+  <!-- PORTFOLIO -->
   <section id="work" class="bg-black py-20 border-y border-zinc-800">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-4 mb-12">
@@ -159,6 +166,7 @@
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about" class="max-w-5xl mx-auto px-6 py-20">
     <div class="grid md:grid-cols-12 gap-x-12 items-center">
       <div class="md:col-span-7">
@@ -181,6 +189,7 @@
     </div>
   </section>
 
+  <!-- PROCESS -->
   <section class="bg-zinc-900 py-16 border-y border-zinc-800">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-12"><h2 class="text-4xl font-semibold tracking-tight">How we work together</h2><p class="text-zinc-400 mt-3 max-w-md mx-auto">Simple. Fast. No surprises.</p></div>
@@ -193,6 +202,7 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="max-w-3xl mx-auto px-6 py-20 text-center">
     <div class="mb-8"><div class="inline-block px-5 py-1.5 rounded-full bg-red-950 text-red-400 text-xs font-bold tracking-[3px]">LET'S CREATE SOMETHING THAT SELLS</div></div>
     <h2 class="text-6xl font-bold tracking-tighter">Ready to launch<br>your vision?</h2>
@@ -216,7 +226,7 @@
   </footer>
 
   <script>
-    // Custom GLSL Vertex Shader Simulation (WebGL-level particle displacement + wave)
+    // Spider canvas (unchanged, high-performance)
     const canvas = document.getElementById('spiderCanvas');
     const ctx = canvas.getContext('2d');
     let w = canvas.width = canvas.offsetWidth, h = canvas.height = canvas.offsetHeight;
@@ -226,18 +236,16 @@
     function createParticle() { particles.push({x: Math.random() * w, y: 20 + Math.random() * 60, vx: Math.random() * 5 - 2.5, vy: -Math.random() * 5 - 1, life: 1.5, size: Math.random() * 5 + 2}); }
     function draw() {
       ctx.clearRect(0, 0, w, h);
-      // GLSL-inspired web (vertex displacement simulation)
       ctx.strokeStyle = '#fef08c'; ctx.shadowBlur = 35; ctx.shadowColor = '#fde047';
       for (let i = 0; i < 35; i++) {
         ctx.globalAlpha = 0.6 + Math.sin(t * 6 + i) * 0.4;
         ctx.beginPath();
-        ctx.moveTo(0, 15 + i * 2.8 + Math.sin(t + i) * 8); // Vertex wave
+        ctx.moveTo(0, 15 + i * 2.8 + Math.sin(t + i) * 8);
         ctx.quadraticCurveTo(w * 0.4, 10 + Math.cos(t * 2 + i) * 22, w * 0.72, 38 + i * 2);
         ctx.quadraticCurveTo(w, 12 + Math.sin(t * 3 + i) * 10, w, 65);
         ctx.stroke();
       }
       ctx.globalAlpha = 1;
-      // Chrome spider
       const sx = (w * 0.22) + Math.sin(t * 2.4) * (w * 0.55);
       const sy = 48 + Math.sin(t * 5) * 8;
       ctx.fillStyle = '#e2e8f0'; ctx.shadowBlur = 55; ctx.shadowColor = '#fef08c';
@@ -250,7 +258,6 @@
         ctx.lineTo(sx + l * 28 + Math.cos(t * 11 + l) * 26, sy + Math.sin(t * 9 + l) * 42);
         ctx.stroke();
       }
-      // Particle system (GLSL vertex displacement simulation)
       for (let i = particles.length - 1; i >= 0; i--) {
         let p = particles[i];
         p.x += p.vx + Math.sin(t + p.y) * 1.2; p.y += p.vy; p.life -= 0.028; p.vy += 0.17;
@@ -259,7 +266,6 @@
         if (p.life <= 0) particles.splice(i, 1);
       }
       if (Math.random() < 0.95) createParticle();
-      // Electric GLSL arc
       if (Math.random() < 0.4) {
         ctx.strokeStyle = '#fef08c'; ctx.lineWidth = 2;
         ctx.beginPath(); ctx.moveTo(sx, sy - 10); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
@@ -268,7 +274,7 @@
     }
     draw();
 
-    // Marquee + parallax
+    // Marquee pause (desktop) + scroll parallax
     window.addEventListener('scroll', () => document.querySelector('.cinematic-hero').style.backgroundPositionY = (window.scrollY * 0.4) + 'px');
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.bg-red-600').forEach(c => {
